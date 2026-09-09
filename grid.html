@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 97vh;
+        width: 100%;
+        border: 1px solid black;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        background-color: bisque;
+        border-radius: 15px;
+    }
+
+    .box {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        background: linear-gradient(35deg, red, yellow);
+        font-size: 20px;
+    }
+
+    .box1 {
+        grid-column: span 5;
+    }
+
+    .box2 {
+        grid-row: 2;
+
+        grid-row: span 2;
+    }
+
+    .box4 {
+
+        grid-column: span 2;
+    }
+
+    .box3 {
+        grid-column: 4;
+        grid-row: span 4;
+    }
+
+    .box10 {
+        grid-row: 4;
+    }
+
+    .box9 {
+        grid-column: 5;
+        grid-row: 4;
+    }
+
+    .box6 {
+        grid-column: 5;
+        grid-row: 3;
+    }
+
+    .box5 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box1 box">1</div>
+        <div class="box2 box">2</div>
+        <div class="box4 box">4</div>
+        <div class="box3 box">3</div>
+        <div class="box5 box">5</div>
+        <div class="box6 box">6</div>
+        <div class="box7 box">7</div>
+        <div class="box8 box">8</div>
+        <div class="box9 box">9</div>
+        <div class="box10 box">10</div>
+    </div>
+</body>
+
+</html>

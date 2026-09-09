@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout using Span</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ff4500;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 
+           GRID CONTAINER:
+           - 5 Columns and 5 Rows
+        */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 12px;
+            background-color: #ff4500;
+            padding: 12px;
+            height: 95vh;
+        }
+
+        /* COMMON BOX STYLING */
+        .box {
+            background-color: #9ecc00;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* -------------------------------------------------------------
+           EASY POSITIONING USING 'span':
+           Only 5 simple rules needed! The rest auto-place naturally.
+           ------------------------------------------------------------- */
+
+        /* Box 1: Spans 5 columns across the top */
+        .b1 {
+            grid-column: span 5;
+        }
+
+        /* Box 2: Spans 2 rows vertically */
+        .b2 {
+            grid-row: span 2;
+        }
+
+        /* Box 4: Spans 2 columns horizontally */
+        .b4 {
+            grid-column: span 2;
+        }
+
+        /* Box 3: Placed in Column 4, spans 4 rows vertically to the bottom */
+        .b3 {
+            grid-column: 4;
+            grid-row: span 4;
+        }
+
+        /* Box 9: Placed in Column 5 under Box 6 */
+        .b9 {
+            grid-column: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Grid Container with HTML in placement order for clean auto-layout -->
+    <div class="container">
+        <div class="box b1">1</div>
+        <div class="box b2">2</div>
+        <div class="box b4">4</div>
+        <div class="box b3">3</div>
+        <div class="box b5">5</div>
+        <div class="box b7">7</div>
+        <div class="box b8">8</div>
+        <div class="box b6">6</div>
+        <div class="box b10">10</div>
+        <div class="box b9">9</div>
+    </div>
+</body>
+
+</html>

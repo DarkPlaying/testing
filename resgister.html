@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f3f0ff 0%, #eef6ff 100%);
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .card {
+            width: 520px;
+            background: #ffffff;
+            border-radius: 26px;
+            box-shadow: 0 20px 45px rgba(93, 61, 242, 0.16);
+            padding: 34px 32px 28px;
+            border: 1px solid rgba(128, 121, 170, 0.12);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 17px;
+            font-weight: 700;
+            color: #4b2bb8;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            color: #1f1f2d;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin: 0 0 24px;
+            text-align: center;
+            color: #5a5a69;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .field {
+            flex: 1;
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #2d2d39;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+            border-radius: 14px;
+            border: 1px solid rgba(72, 72, 92, 0.18);
+            background: #f9f9ff;
+            padding: 0 14px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.2s ease;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        input:focus {
+            border-color: #7a5cff;
+            box-shadow: 0 0 0 3px rgba(122, 92, 255, 0.12);
+            background: #fff;
+        }
+
+        input::placeholder {
+            color: rgba(48, 48, 60, 0.55);
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 14px 0 18px;
+            font-size: 14px;
+            color: #3e3e4f;
+        }
+
+        .terms input {
+            width: 15px;
+            height: 15px;
+            margin: 0;
+        }
+
+        .terms a {
+            color: #5d3df2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #5f35d9, #7b3ff5);
+            color: #fff;
+            height: 46px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 12px 22px rgba(98, 67, 215, 0.2);
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px 0 16px;
+            color: rgba(40, 40, 52, 0.7);
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(40, 40, 52, 0.18);
+        }
+
+        .social {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social button {
+            width: 100%;
+            height: 42px;
+            border: 1px solid rgba(40, 40, 52, 0.12);
+            border-radius: 14px;
+            background: #f2f2f7;
+            color: #2d2d39;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .login-link {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 15px;
+            color: #4f4f60;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: #5d3df2;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="brand"><i class="fa-brands fa-react"></i> Konekta</div>
+            <h1>Create Account</h1>
+            <p class="subtitle">Welcome! Please fill in your details to register.</p>
+
+            <form>
+                <div class="row">
+                    <div class="field">
+                        <label for="fname">First Name</label>
+                        <input id="fname" type="text" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="field">
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Your Password">
+                </div>
+
+                <div class="field">
+                    <label for="cpassword">Confirm Password</label>
+                    <input id="cpassword" type="password" placeholder="Confirm Your Password">
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox">
+                    <span>I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></span>
+                </div>
+
+                <button class="btn" type="submit">Register</button>
+
+                <div class="divider">Or continue with</div>
+
+                <div class="social">
+                    <button type="button"><i class="fa-brands fa-google"></i> Sign up with google</button>
+                    <button type="button"><i class="fa-brands fa-facebook"></i> Sign up with facebook</button>
+                </div>
+            </form>
+
+            <p class="login-link">Already have an account? <a href="login2.html">Login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
