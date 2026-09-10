@@ -1,16 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Background Image</title>
+    <title>Website Explorer</title>
 
-    <link rel="stylesheet" href="./index.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+        }
+
+        header {
+            background-color: #17202a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            color: #ccc;
+        }
+
+        .buttons {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 5px;
+            background-color: #2874a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .buttons a:hover {
+            background-color: #1b4f72;
+        }
+
+        .frame-box {
+            width: 95%;
+            margin: 25px auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        .frame-title {
+            padding: 12px 18px;
+            background-color: #e5e7e9;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            color: gray;
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body>
+<div class="buttons">
 
-    <div class="box">
-        
+    <a href="./login.html"
+       target="webpage">
+       Login Page
+    </a>
+
+    <a href="./project1.html"
+       target="webpage">
+       Travel Site
+    </a>
+
+    <a href="./project2.html"
+       target="webpage">
+         Student Table
+    </a>
+
+    <a href="https://aboutsanjay.vercel.app/"
+       target="webpage">
+       Portfolio
+    </a>
+
+    <a href="https://wikipedia.org/"
+       target="webpage">
+         Wikipedia
+    </a>
+
+    <a href="https://www.openstreetmap.org/"
+       target="webpage">
+       OpenStreetMap
+    </a>
+
+</div>
+
+
+<div class="frame-box">
+
+    <div class="frame-title">
+        Website Preview
     </div>
-    <p>Center Background Image</p>
+
+    <iframe
+        name="webpage"
+        src="https://aboutsanjay.vercel.app/"
+        title="Portofolio Preview">
+    </iframe>
+
+</div>
+
+
+<footer>
+    Web Explorer | HTML Iframe Project
+</footer>
+
 </body>
 </html>
